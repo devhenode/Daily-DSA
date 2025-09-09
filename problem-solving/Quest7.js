@@ -33,29 +33,21 @@ All elements are distinct.
 // My Correct code - thanks to neetcode hints, Memory: 70 MB, Time: 14ms
 // Time complexity O(n) - linear time
 // Space complexity O(n) - linear time
+// Hash Set method
 
 var containsDuplicate = function(nums) {
     const unique_num = new Set(nums);
     return unique_num.size !== nums.length
 };
 
-// my incorrect code
+// my incomplete code but correct - brute force method
 /*
-    let nums_check = []
-    let num_overall = 0
   for (let i = 0; i < nums.length; i++) {
-    let prev_num = nums[i];
-    nums_check = nums[i];
     for (let j = 1; j < nums.length + 1; j++) {
-        let next_num = nums[j];
-        
-        if (prev_num == next_num) {
+        if (nums[i] == nums[j]) {
             return true
-        }
-        else {
-            return false
-        }
-       
+        }       
     }   
+    return false;
 console.log(nums_check)
   */
